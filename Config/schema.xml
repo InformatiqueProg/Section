@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database defaultIdMethod="native" name="thelia">
+    <table name="section" namespace="Section\Model">
+        <column name="id" type="INTEGER" autoIncrement="true" primaryKey="true" required="true" />
+        <column name="title" size="255" type="VARCHAR" />
+        <column name="description" type="CLOB" />
+        <column name="visible" type="TINYINT" />
+        <behavior name="timestampable" />
+        <behavior name="i18n">
+            <parameter name="i18n_columns" value="title, description" />
+        </behavior>
+    </table>
+    <external-schema filename="local/config/schema.xml" referenceOnly="true" />
+</database>

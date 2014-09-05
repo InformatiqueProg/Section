@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns="http://thelia.net/schema/dic/config"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://thelia.net/schema/dic/config http://thelia.net/schema/dic/config/thelia-1.0.xsd">
+
+    <loops>
+        <loop name="section" class="Section\Loop\SectionLoop" />
+    </loops>
+
+    <forms>
+        <form name="section_add" class="Section\Form\SectionAddForm" />
+        <form name="section_update" class="Section\Form\SectionUpdateForm" />
+    </forms>
+
+    <services>
+        <service id="section_action" class="Section\Action\Section">
+            <tag name="kernel.event_subscriber"/>
+        </service>
+    </services>
+
+</config>
