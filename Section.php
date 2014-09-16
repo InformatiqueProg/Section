@@ -24,8 +24,20 @@ class Section extends BaseModule
      */
     public function postActivation(ConnectionInterface $con = null)
     {
-        $database = new Database($con->getWrappedConnection());
-        $database->insertSql(null, array(THELIA_ROOT.'/local/modules/Section/Config/thelia.sql'));
+        $query = "SHOW TABLES LIKE 'section'";
+        $connection = $con->getWrappedConnection();
+        $stmt = $connection->prepare($query);
+        if ($stmt === false) {
+            throw new \RuntimeException("Failed to prepare statement for $query: " . print_r($connection->errorInfo(), 1));
+        }
+        $success = $stmt->execute();
+        if ($success === false || $stmt->errorCode() != 0) {
+            throw new \RuntimeException("Failed to execute SQL '$query', error:".print_r($stmt->errorInfo(), 1));
+        }
+        if ($stmt->rowCount() == 0) {
+            $database = new Database($con->getWrappedConnection());
+            $database->insertSql(null, array(__DIR__ . DS . 'Config' . DS .'thelia.sql'));
+        }
     }
 
 }

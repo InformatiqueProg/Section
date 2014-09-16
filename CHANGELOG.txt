@@ -1,4 +1,7 @@
 
 
+********************************** MODULE Section 1.03 **********************************
+- Module Activate/Deactivate (TABLE OVERWRITE)
+
 ********************************** MODULE Section 1.02 **********************************
 - Corrections doublons bootwtrap-switch
