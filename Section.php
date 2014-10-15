@@ -35,7 +35,7 @@ class Section extends BaseModule
             throw new \RuntimeException("Failed to execute SQL '$query', error:".print_r($stmt->errorInfo(), 1));
         }
         if ($stmt->rowCount() == 0) {
-            $database = new Database($con->getWrappedConnection());
+            $database = new Database($connection);
             $database->insertSql(null, array(__DIR__ . DS . 'Config' . DS .'thelia.sql'));
         }
     }

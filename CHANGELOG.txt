@@ -1,5 +1,8 @@
 
 
+********************************** MODULE Section 1.04 **********************************
+- Correction "token_url" (THELIA 2.0.4)
+
 ********************************** MODULE Section 1.03 **********************************
 - Module Activate/Deactivate (TABLE OVERWRITE)
 

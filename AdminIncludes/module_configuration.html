@@ -142,7 +142,7 @@
 
         dialog_ok_label     = {intl l="Save"}
 
-        form_action        = {url path='/admin/module/Section/create'}
+        form_action        = {token_url path='/admin/module/Section/create'}
         form_enctype       = {form_enctype form=$form}
         form_error_message = $form_error_message
     }
@@ -161,6 +161,6 @@
     dialog_title    = {intl d='section.ai' l='Delete this section'}
     dialog_message  = {intl d='section.ai' l='Do you really want to delete this section?'}
 
-    form_action         = {url path='/admin/module/Section/delete'}
+    form_action         = {token_url path='/admin/module/Section/delete'}
     form_content        = {$smarty.capture.section_delete_dialog nofilter}
 }
