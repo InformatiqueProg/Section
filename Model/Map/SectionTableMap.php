@@ -431,10 +431,6 @@ class SectionTableMap extends TableMap
             $criteria = $criteria->buildCriteria(); // build Criteria from Section object
         }
 
-        if ($criteria->containsKey(SectionTableMap::ID) && $criteria->keyContainsValue(SectionTableMap::ID) ) {
-            throw new PropelException('Cannot insert a value for auto-increment primary key ('.SectionTableMap::ID.')');
-        }
-
 
         // Set the correct dbName
         $query = SectionQuery::create()->mergeWith($criteria);

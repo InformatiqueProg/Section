@@ -1,5 +1,8 @@
 
 
+********************************** MODULE Section 1.05 **********************************
+- PB "profil droits" => refactorisation event/controller
+
 ********************************** MODULE Section 1.04 **********************************
 - Correction "token_url" (THELIA 2.0.4)
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database defaultIdMethod="native" name="thelia">
-    <table name="section" namespace="Section\Model">
+    <table name="section" namespace="Section\Model" allowPkInsert="true">
         <column name="id" type="INTEGER" autoIncrement="true" primaryKey="true" required="true" />
         <column name="title" size="255" type="VARCHAR" />
         <column name="description" type="CLOB" />

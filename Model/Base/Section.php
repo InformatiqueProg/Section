@@ -815,9 +815,6 @@ abstract class Section implements ActiveRecordInterface
         $index = 0;
 
         $this->modifiedColumns[SectionTableMap::ID] = true;
-        if (null !== $this->id) {
-            throw new PropelException('Cannot insert a value for auto-increment primary key (' . SectionTableMap::ID . ')');
-        }
 
          // check the columns in natural order for more readable SQL queries
         if ($this->isColumnModified(SectionTableMap::ID)) {
@@ -868,7 +865,9 @@ abstract class Section implements ActiveRecordInterface
         } catch (Exception $e) {
             throw new PropelException('Unable to get autoincrement id.', 0, $e);
         }
-        $this->setId($pk);
+        if ($pk !== null) {
+            $this->setId($pk);
+        }
 
         $this->setNew(false);
     }

@@ -14,7 +14,7 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 use Thelia\Core\Translation\Translator;
 use Thelia\Form\BaseForm;
 
-class SectionAddForm extends BaseForm
+class SectionCreateForm extends BaseForm
 {
 
     /**
@@ -76,6 +76,6 @@ class SectionAddForm extends BaseForm
      */
     public function getName()
     {
-        return 'section_add_form';
+        return 'section_create_form';
     }
 }

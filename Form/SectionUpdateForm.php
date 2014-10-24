@@ -13,7 +13,7 @@ namespace Section\Form;
 use Symfony\Component\Validator\Constraints\GreaterThan;
 use Thelia\Form\StandardDescriptionFieldsTrait;
 
-class SectionUpdateForm extends SectionAddForm
+class SectionUpdateForm extends SectionCreateForm
 {
 
     use StandardDescriptionFieldsTrait;

@@ -7,7 +7,7 @@
                         {intl d='section.ai' l="Manage sections"}
 
                         {loop type="auth" name="can_create" role="ADMIN" module="Section" access="CREATE"}
-                        <a class="btn btn-default btn-primary action-btn" title="{intl l='Add'}" href="#section_add_dialog" data-toggle="modal">
+                        <a class="btn btn-default btn-primary action-btn" title="{intl l='Add'}" href="#section_create_dialog" data-toggle="modal">
                             <span class="glyphicon glyphicon-plus-sign"></span>
                         </a>
                         {/loop}
@@ -29,7 +29,7 @@
                         <td>{$ID}</td>
 
                         <td class="object-title">
-                            <a title="{intl d='section.ai' l='Edit'}" href="{url path='/admin/module/Section/update' section_id=$ID}">{$TITLE}</a>
+                            <a title="{intl d='section.ai' l='Edit'}" href="{url path='/admin/module/Section/edit' section_id=$ID}">{$TITLE}</a>
                         </td>
 
                         <td>
@@ -49,7 +49,7 @@
                         <td class="actions">
                             <div class="btn-group">
                                 {loop type="auth" name="can_change" role="ADMIN" module="Section" access="UPDATE"}
-                                <a class="btn btn-default btn-xs" title="{intl d='section.ai' l='Edit'}" href="{url path='/admin/module/Section/update' section_id=$ID}"><i class="glyphicon glyphicon-edit"></i></a>
+                                <a class="btn btn-default btn-xs" title="{intl d='section.ai' l='Edit'}" href="{url path='/admin/module/Section/edit' section_id=$ID}"><i class="glyphicon glyphicon-edit"></i></a>
                                 {/loop}
 
                                 {loop type="auth" name="can_delete" role="ADMIN" module="Section" access="DELETE"}
@@ -89,16 +89,12 @@
 
 {* ------------------------------------------------ Adding a new one ------------------------------------------------ *}
 
-{form name="section_add"}
+{form name="section_create"}
 
     {* Capture the dialog body, to pass it to the generic dialog *}
-    {capture "section_add_dialog"}
+    {capture "section_create_dialog"}
 
         {form_hidden_fields form=$form}
-
-        {form_field form=$form field='success_url'}
-        <input type="hidden" name="{$name}" value="{url path='/admin/module/Section'}" />
-        {/form_field}
 
         {form_field form=$form field='title'}
         <div class="form-group {if $error}has-error{/if}">
@@ -136,9 +132,9 @@
     {include
         file = "includes/generic-create-dialog.html"
 
-        dialog_id    = "section_add_dialog"
+        dialog_id    = "section_create_dialog"
         dialog_title = {intl l="Add"}
-        dialog_body  = {$smarty.capture.section_add_dialog nofilter}
+        dialog_body  = {$smarty.capture.section_create_dialog nofilter}
 
         dialog_ok_label     = {intl l="Save"}
 

@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <routes xmlns="http://symfony.com/schema/routing"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
     <route id="admin.section.create" path="/admin/module/Section/create">
         <default key="_controller">Section\Controller\Admin\SectionController::createAction</default>
     </route>
-
+    <route id="admin.section.edit" path="/admin/module/Section/edit">
+        <default key="_controller">Section\Controller\Admin\SectionController::editAction</default>
+    </route>
     <route id="admin.section.update" path="/admin/module/Section/update">
         <default key="_controller">Section\Controller\Admin\SectionController::updateAction</default>
     </route>
-
-    <route id="admin.section.save" path="/admin/module/Section/save">
-        <default key="_controller">Section\Controller\Admin\SectionController::processUpdateAction</default>
-    </route>
-
     <route id="admin.section.delete" path="/admin/module/Section/delete">
         <default key="_controller">Section\Controller\Admin\SectionController::deleteAction</default>
     </route>
-
     <route id="admin.section.toggle-online" path="/admin/module/Section/toggle-online">
         <default key="_controller">Section\Controller\Admin\SectionController::setToggleVisibilityAction</default>
     </route>
