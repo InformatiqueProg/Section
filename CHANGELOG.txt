@@ -1,4 +1,6 @@
-
+********************************** MODULE Section 1.06 **********************************
+- corrections THELIA 2.1.1
+- schema.xml optimisations
 
 ********************************** MODULE Section 1.05 **********************************
 - PB "profil droits" => refactorisation event/controller
