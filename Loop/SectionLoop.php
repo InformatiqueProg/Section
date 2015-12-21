@@ -11,6 +11,7 @@
 namespace Section\Loop;
 
 use Section\Model\SectionQuery;
+
 use Propel\Runtime\ActiveQuery\Criteria;
 use Thelia\Core\Template\Element\BaseI18nLoop;
 use Thelia\Core\Template\Element\LoopResult;
@@ -20,32 +21,12 @@ use Thelia\Core\Template\Loop\Argument\Argument;
 use Thelia\Core\Template\Loop\Argument\ArgumentCollection;
 use Thelia\Type;
 
-class SectionLoop extends BaseI18nLoop implements PropelSearchLoopInterface {
+class SectionLoop extends BaseI18nLoop implements PropelSearchLoopInterface
+{
 
     protected $timestampable = true;
 
     /**
-     * Definition of loop arguments
-     *
-     * example :
-     *
-     * public function getArgDefinitions()
-     * {
-     *  return new ArgumentCollection(
-     *
-     *       Argument::createIntListTypeArgument('id'),
-     *           new Argument(
-     *           'ref',
-     *           new TypeCollection(
-     *               new Type\AlphaNumStringListType()
-     *           )
-     *       ),
-     *       Argument::createIntListTypeArgument('category'),
-     *       Argument::createBooleanTypeArgument('new'),
-     *       ...
-     *   );
-     * }
-     *
      * @return \Thelia\Core\Template\Loop\Argument\ArgumentCollection
      */
     protected function getArgDefinitions()
@@ -92,10 +73,11 @@ class SectionLoop extends BaseI18nLoop implements PropelSearchLoopInterface {
         foreach ($loopResult->getResultDataCollection() as $section) {
             $loopResultRow = new LoopResultRow($section);
 
-            $loopResultRow->set('ID', $section->getId())
-                ->set('IS_TRANSLATED',$section->getVirtualColumn('IS_TRANSLATED'))
-                ->set('LOCALE',$this->locale)
-                ->set('TITLE',$section->getVirtualColumn('i18n_TITLE'))
+            $loopResultRow
+                ->set('ID', $section->getId())
+                ->set('IS_TRANSLATED', $section->getVirtualColumn('IS_TRANSLATED'))
+                ->set('LOCALE', $this->locale)
+                ->set('TITLE', $section->getVirtualColumn('i18n_TITLE'))
                 ->set('DESCRIPTION', $section->getVirtualColumn('i18n_DESCRIPTION'))
                 ->set('VISIBLE', $section->getVisible())
             ;

@@ -7,12 +7,12 @@
     <descriptive locale="fr_FR">
         <title>Module Sections</title>
     </descriptive>
-    <version>1.06</version>
+    <version>1.07</version>
     <author>
         <name>Informatique Prog</name>
         <email>contact@informatiqueprog.net</email>
     </author>
     <type>classic</type>
-    <thelia>2.1.1</thelia>
+    <thelia>2.2.0</thelia>
     <stability>prod</stability>
 </module>

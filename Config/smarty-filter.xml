@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<smartyfilters xmlns="urn:thelia:module:smarty-filter">
+    <smartyfilter code="smartyfilter.filter.section">
+        <descriptive locale="fr_FR">
+            <title>SectionFilter</title>
+            <description>Filtre pour afficher les sections</description>
+            <type>output</type>
+        </descriptive>
+    </smartyfilter>
+</smartyfilters>

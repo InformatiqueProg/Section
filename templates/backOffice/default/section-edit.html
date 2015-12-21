@@ -7,14 +7,14 @@
 {block name="page-title"}{intl l='Edit'}{/block}
 
 {block name="main-content"}
-<div class="section edit-section">
+<div class="sections edit-section">
     <div id="wrapper" class="container">
 
         <ul class="breadcrumb">
             <li><a href="{url path='admin/home'}">{intl l="Home"}</a></li>
             <li><a href="{url path='admin/modules'}">{intl l="Modules"}</a></li>
-            <li><a href="{url path='admin/module/Section'}">{intl d='section.ai' l='Manage sections'}</a></li>
-            <li><a href="#">{intl d='section.ai' l='Edit'}</a></li>
+            <li><a href="{url path='admin/module/Section'}">{intl d='section.bo.default' l='Manage sections'}</a></li>
+            <li><a href="#">{intl d='section.bo.default' l='Edit'}</a></li>
         </ul>
 
         <div class="row">
@@ -22,7 +22,7 @@
             <div class="col-md-12 general-block-decorator">
                 <div class="row">
                     <div class="col-md-7 title">
-                    {intl d='section.ai' l='Edit section : %title' title=$TITLE}
+                    {intl d='section.bo.default' l='Edit section : %title' title=$TITLE}
                     </div>
 
                     <div class="col-md-5 actions">
@@ -98,7 +98,7 @@
                                             <div class="control-group">
                                                 <lablel>&nbsp;</lablel>
                                                 <div class="controls">
-                                                    <p>{intl d='section.ai' l='Section created on %date_create. Last modification: %date_change' date_create="{format_date date=$CREATE_DATE}" date_change="{format_date date=$UPDATE_DATE}"}</p>
+                                                    <p>{intl d='section.bo.default' l='Section created on %date_create. Last modification: %date_change' date_create="{format_date date=$CREATE_DATE}" date_change="{format_date date=$UPDATE_DATE}"}</p>
                                                 </div>
                                             </div>
                                         </div>
