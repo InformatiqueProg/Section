@@ -19,7 +19,7 @@ use Thelia\Module\BaseModule;
 
 class Section extends BaseModule
 {
-    const SECTIONTAG_REGEX = '/\[moduleSection\_(\d)+\]/';
+    const SECTIONTAG_REGEX = '/\[moduleSection\_(\d+)\]/';
 
     /**
      * @param int $sectionId

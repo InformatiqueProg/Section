@@ -1,3 +1,9 @@
+# Section 1.09
+- Correction bug Section tout le temps visible (smarty_filter)
+
+# Section 1.08
+- Correction bug Section id > 9
+
 # Section 1.07
 - remove AdminIncludes
 - Add "shortcode" ```[moduleSection_2]``` where 2 is section ID

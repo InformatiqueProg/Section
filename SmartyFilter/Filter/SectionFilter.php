@@ -44,9 +44,9 @@ class SectionFilter
             $sectionHtmlCodes = [];
 
             foreach ($sectionTags as $sectionId) {
-                $section = SectionQuery::create()->findPk($sectionId);
+                $section = SectionQuery::create()->filterByVisible(1)->findOneById($sectionId);
 
-                if (null !== $section) {
+                if ($section) {
                     $section->setLocale($this->request->getSession()->getLang()->getLocale());
 
                     $sectionHtmlCodes[Section::makeSectionTag($sectionId)] = $section->getDescription();
