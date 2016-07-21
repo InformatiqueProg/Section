@@ -1,3 +1,6 @@
+# Section 1.10
+- hide [moduleSection_x] text if section X is not visible (smarty_filter)
+
 # Section 1.09
 - Correction bug Section tout le temps visible (smarty_filter)
 

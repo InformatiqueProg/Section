@@ -50,6 +50,8 @@ class SectionFilter
                     $section->setLocale($this->request->getSession()->getLang()->getLocale());
 
                     $sectionHtmlCodes[Section::makeSectionTag($sectionId)] = $section->getDescription();
+                } else {
+                    $sectionHtmlCodes[Section::makeSectionTag($sectionId)] = '';
                 }
             }
 
