@@ -1,3 +1,6 @@
+# Section 1.11
+- missing <?php on smartyFilter file
+
 # Section 1.10
 - hide [moduleSection_x] text if section X is not visible (smarty_filter)
 
